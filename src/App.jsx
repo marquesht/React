@@ -13,23 +13,23 @@ function App() {
   }, [tasks]);
 
   //Chamando uma API para a aplicação
-  useEffect(() => {
-    const fetchTasks = async () => {
-      //Acessa a API e retorna os dados
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/todos?_limit=10",
-        {
-          method: "GET",
-        }
-      );
-      //Converte os dados em JSON
-      const data = await response.json();
-      //Atualiza o estado com os dados da API
+  //useEffect(() => {
+  //const fetchTasks = async () => {
+  //Acessa a API e retorna os dados
+  //const response = await fetch(
+  //"https://jsonplaceholder.typicode.com/todos?_limit=10",
+  //{
+  //method: "GET",
+  //}
+  //);
+  //Converte os dados em JSON
+  //const data = await response.json();
+  //Atualiza o estado com os dados da API
 
-      //setTasks(data);
-    };
-    fetchTasks();
-  }, []);
+  //setTasks(data);
+  //};
+  //fetchTasks();
+  //}, []);
 
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
